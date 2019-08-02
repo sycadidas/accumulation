@@ -1,6 +1,4 @@
-package com.jd.o2o.cms.act.service.componentOp;
 
-import com.jd.o2o.cms.act.domain.eunm.ComponentEnum;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
