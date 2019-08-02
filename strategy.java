@@ -1,6 +1,6 @@
-package com.jd.o2o.cms.act.service.componentOp;
 
-import com.jd.o2o.cms.act.domain.eunm.ComponentEnum;
+
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
