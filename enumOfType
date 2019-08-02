@@ -1,0 +1,88 @@
+package com.jd.o2o.cms.act.domain.eunm;
+
+/**
+ * 运营端活动页现存组件类型
+ * 组件枚举类 放弃查询数据库
+ * Created by sunyanchen on 2019/7/31.
+ */
+public enum ComponentEnum {
+
+    COMPONENT_FLOOR_BANNER("轮播图", 3),
+    COMPONENT_ACT("活动图", 4),
+    COMPONENT_BUSINESS_LIST("商品列表", 7),
+    COMPONENT_COUPON("优惠券", 12),
+    COMPONENT_NAVIGATION("分类导航", 23),
+    COMPONENT_HOT_PRODUCT("爆品组件", 25),
+    COMPONENT_VIDEO("视频组件", 26)
+    ;
+
+    private String component_name;
+    private Integer component_type;
+
+    ComponentEnum(String component_name, Integer component_type) {
+        this.component_name = component_name;
+        this.component_type = component_type;
+    }
+
+    /**
+     * 根据组件名称获取组件Code
+     * @param component_name
+     * @return
+     */
+    public static Integer getCode(String component_name) {
+        for (ComponentEnum c : ComponentEnum.values()) {
+            if (c.getComponent_name() == component_name) {
+                return c.getComponent_type();
+            }
+        }
+        return -1;
+    }
+
+    public static ComponentEnum getEnum(Integer component_type) {
+        for (ComponentEnum c : ComponentEnum.values()) {
+            if (c.getComponent_type().equals(component_type)){
+                return c;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * 根据组件类型获取组件枚举
+     * @param component_code
+     * @return
+     */
+    public static String getName(Integer component_code) {
+        for (ComponentEnum c : ComponentEnum.values()) {
+            if (c.getComponent_type().equals(component_code)){
+                return c.getComponent_name();
+            }
+        }
+        return "";
+    }
+
+    /**
+     * 获取所有组件枚举
+     * @return
+     */
+    public static ComponentEnum[] getComponent() {
+
+        return ComponentEnum.values();
+    }
+
+    public String getComponent_name() {
+        return component_name;
+    }
+
+    public void setComponent_name(String component_name) {
+        this.component_name = component_name;
+    }
+
+    public  Integer getComponent_type() {
+        return component_type;
+    }
+
+    public void setComponent_type(Integer component_type) {
+        this.component_type = component_type;
+    }
+}
