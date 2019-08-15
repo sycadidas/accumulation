@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 import static java.lang.annotation.ElementType.*;
 
 /**
- * 用于标注组件服务类
+ * 用于标注服务类
  * Created by sunyanchen on 2019/8/1.
  */
 @Target(value={TYPE})
