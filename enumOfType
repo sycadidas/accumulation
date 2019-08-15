@@ -1,31 +1,31 @@
 
 
 /**
- * 运营端活动页现存组件类型
- * 组件枚举类 放弃查询数据库
+ * 
+ * 枚举类型
  * Created by sunyanchen on 2019/7/31.
  */
 public enum ComponentEnum {
 
-    COMPONENT_FLOOR_BANNER("轮播图", 3),
-    COMPONENT_ACT("活动图", 4),
-    COMPONENT_BUSINESS_LIST("商品列表", 7),
-    COMPONENT_COUPON("优惠券", 12),
-    COMPONENT_NAVIGATION("分类导航", 23),
-    COMPONENT_HOT_PRODUCT("爆品组件", 25),
-    COMPONENT_VIDEO("视频组件", 26)
+    A("A", 1),
+    B("B", 2),
+    C("C", 3),
+    D("D", 4),
+    E("E", 5),
+    F("F", 6),
+    G("G", 7)
     ;
 
-    private String component_name;
-    private Integer component_type;
+    private String name;
+    private Integer type;
 
-    ComponentEnum(String component_name, Integer component_type) {
-        this.component_name = component_name;
-        this.component_type = component_type;
+    ComponentEnum(String name, Integer type) {
+        this.name = name;
+        this.type = type;
     }
 
     /**
-     * 根据组件名称获取组件Code
+     * 根据组件名称获取Code
      * @param component_name
      * @return
      */
